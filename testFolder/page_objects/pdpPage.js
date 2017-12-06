@@ -17,14 +17,13 @@ var pdpPage = function() {
     };
 
     this.selectAttributeGB = function() {              
-        this.selectGBOption.$('[value = "64"]').click(); 
+        this.selectGBOption.$('[value = "64"]').click();
         helperVariables.waitForTextToBeFoundInElement(this.selectGBOption.$('[selected=""]'), '64');  
     };
 
 
     this.selectSize = function() {
         this.sizeXXL.click();
-        //this.selectSize.$('[data-reactid = "57"]').click(); 
         helperVariables.waitForTextToBeFoundInElement(this.selectedSize, 'XXL');
 
     };
