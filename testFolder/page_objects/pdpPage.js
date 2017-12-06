@@ -3,6 +3,7 @@ var helperVariables = require ('../page_objects/helper.js');
 var pdpPage = function() {
     
     this.addToWishList = $$('.Button_button_2zC.Button_button--clean_WC2.Button_button--sm_3g5.Button__button--block');
+    this.addedToWishlistBtn = $('.icon.icon-like-solid');
     this.attributeGB = element(by.cssContainingText('option', '64'));
     this.selectGBOption = element.all(by.className('input-select')).last();
 
@@ -14,6 +15,7 @@ var pdpPage = function() {
 
     this.pressAddToWishListButton = function() {
         this.addToWishList.click();
+        helperVariables.waitForElementToBeFound(this.addedToWishlistBtn);
     };
 
     this.selectAttributeGB = function() {              
